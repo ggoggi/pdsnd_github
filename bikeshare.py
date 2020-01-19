@@ -10,7 +10,9 @@ days      = [ 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'
 
 def get_filters():
     '''Handles and store user inputs into variables for the upcoming analysys'''
-
+#The function stores the city input in the variable city,
+#then stores the filters input in the variable get_filters.
+#This allows to manage each of the 4 possible scenarios separately
     print('\nHello! Let\'s explore some US bikeshare data!')
 
     city = input("Would you like to see data from Chicago, New York City or Washington? ").lower()

@@ -129,6 +129,9 @@ def trip_duration_stats(df):
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()/60
     print('\nMean travel time in minutes: {}'.format(mean_travel_time))
+    # display longest trip
+    longest_trip = df['Trip Duration'].max()/60
+    print('\nLongest trip in minutes: {}'.format(longest_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)

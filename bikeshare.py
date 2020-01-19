@@ -159,7 +159,7 @@ def user_stats(df):
     try:
         print('\nEarliest year of birth: {}'.format(df['Birth Year'].min()))
         print('Most recent year of birth: {}'.format(df['Birth Year'].max()))
-        print('Most common year of birth: {}'.format(df['Birth Year'].mode()))
+        print('Average year of birth: {}'.format(df['Birth Year'].avg()))
     except:
         print ('Birth year datas are unavailable for this city')
 

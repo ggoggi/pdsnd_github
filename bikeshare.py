@@ -91,6 +91,7 @@ def time_stats(df):
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()[0]
+    print('\nMost common hour: {}'.format(popular_hour))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -130,6 +131,9 @@ def trip_duration_stats(df):
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()/60
     print('\nMean travel time in minutes: {}'.format(mean_travel_time))
+    # display longest trip
+    longest_trip = df['Trip Duration'].max()/60
+    print('\nLongest trip in minutes: {}'.format(longest_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -157,7 +161,7 @@ def user_stats(df):
     try:
         print('\nEarliest year of birth: {}'.format(df['Birth Year'].min()))
         print('Most recent year of birth: {}'.format(df['Birth Year'].max()))
-        print('Most common year of birth: {}'.format(df['Birth Year'].mode()))
+        print('Average year of birth: {}'.format(df['Birth Year'].avg()))
     except:
         print ('Birth year datas are unavailable for this city')
 
